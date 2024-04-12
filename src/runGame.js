@@ -1,8 +1,6 @@
 import questionEven from './questionEven.js';
 
-const COUNT_QUESTION_EVEN = 3;
-
-const runGame = () => {
+const runGame = (numberOfRounds) => {
   let i = 0;
   do {
     if (questionEven()) {
@@ -13,7 +11,7 @@ const runGame = () => {
         "'yes' is wrong answer ;(. Correct answer was 'no'. \n Let's try again, Bill!",
       );
     }
-  } while (i < COUNT_QUESTION_EVEN);
+  } while (i < numberOfRounds);
 };
 
 export default runGame;

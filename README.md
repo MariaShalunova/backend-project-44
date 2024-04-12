@@ -8,7 +8,7 @@
 ```sh
 git clone https://github.com/MariaShalunova/backend-project-44.git
 cd backend-project-44
-install
+make install
 ```
 
 ## Start game: "Parity Check"
