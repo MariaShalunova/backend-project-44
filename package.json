@@ -1,12 +1,12 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/MariaShalunova/backend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/MariaShalunova/backend-project-44/actions)",
+  "description": "Project: Mind games",
   "main": "bin/brain-even.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Maria Shalunova",
   "license": "ISC",
   "type": "module",
   "bin": {
