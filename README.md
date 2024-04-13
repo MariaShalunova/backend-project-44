@@ -16,7 +16,7 @@ npm ci OR make install
 The essence of the game is this: the user is shown a random number. And he needs to answer 'yes' if the number is even, or 'no' if it’s odd
 
 ```sh
-brain-even OR make brain-even
+node bin/brain-even.js OR make brain-even OR brain-even
 ```
 [![asciicast](https://asciinema.org/a/2Fpb8gvA3SQIsxgmH0dGHLUXw.svg)](https://asciinema.org/a/2Fpb8gvA3SQIsxgmH0dGHLUXw)
 
