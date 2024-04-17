@@ -1,20 +1,38 @@
 import readlineSync from 'readline-sync';
 
+// Player Greeting
 const welcome = () => console.log('Welcome to the Brain Games!');
 
+// Player name request
 const getPlayerName = () => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   return name;
 };
 
-const runGame = (description, getRound, numberOfRounds = 3) => {
+// Start Game
+const runGame = (description, getRound) => {
+  // Player Greeting
+  welcome();
+
+  // Player name request
+  const player = getPlayerName();
+
+  // Start rounds game
+  const resultGame = runRounds(description, getRound);
+
+  // Result game
+  gameOver(player, resultGame);
+};
+
+// Start rounds game
+const runRounds = (description, getRound, numberOfRounds = 3) => {
   console.log(`${description}`);
 
   let i = 0;
   do {
-    const result = getQuestion(getRound);
-    const [, correctAnswer] = getRound();
+    const [question, correctAnswer] = getRound();
+    const result = getQuestion(question, correctAnswer);
     const [resultGame, playerAnswer] = result;
 
     if (resultGame) {
@@ -31,8 +49,8 @@ const runGame = (description, getRound, numberOfRounds = 3) => {
   return true;
 };
 
-const getQuestion = (getRound) => {
-  const [question, correctAnswer] = getRound();
+// Question
+const getQuestion = (question, correctAnswer) => {
   console.log(`Question:  ${question}`);
 
   const playerAnswer = readlineSync.question('Your answer: ');
@@ -42,6 +60,7 @@ const getQuestion = (getRound) => {
   return [result, playerAnswer];
 };
 
+// Result game
 const gameOver = (player, resultGame) => {
   if (resultGame) {
     console.log(`Congratulations, ${player}!`);
@@ -50,5 +69,4 @@ const gameOver = (player, resultGame) => {
   }
 };
 
-export { welcome, getPlayerName, gameOver };
 export default runGame;
