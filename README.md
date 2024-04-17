@@ -7,7 +7,7 @@
 ```sh
 git clone https://github.com/MariaShalunova/backend-project-44.git
 cd backend-project-44
-npm ci OR make install
+make install | npm ci
 ```
 
 ## Start game: "Parity Check"
@@ -15,7 +15,7 @@ npm ci OR make install
 The essence of the game is this: the user is shown a random number. And he needs to answer 'yes' if the number is even, or 'no' if it’s odd
 
 ```sh
-node bin/brain-even.js OR make brain-even OR brain-even
+make brain-even | node bin/brain-even.js
 ```
 
 [![asciicast](https://asciinema.org/a/9xQP1MGPOYGoNxk0KVr3WQDN8.svg)](https://asciinema.org/a/9xQP1MGPOYGoNxk0KVr3WQDN8)
