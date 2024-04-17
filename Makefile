@@ -17,6 +17,3 @@ brain-games:
 brain-even:
 	node bin/brain-even.js
 
-run:
-	node bin/brain-even.js
-

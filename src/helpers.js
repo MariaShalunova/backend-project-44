@@ -2,4 +2,6 @@
 
 const getRandomInt = (min = 1, max = 999) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-export { getRandomInt };
+const isEvenNumber = (randomNumber) => randomNumber % 2 === 0;
+
+export { getRandomInt, isEvenNumber };
