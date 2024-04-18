@@ -49,3 +49,13 @@ make brain-progression | node bin/brain-progression.js
 ```
 
 [![asciicast](https://asciinema.org/a/eDKmVB9bDzJavx0ZWl1Na7hSI.svg)](https://asciinema.org/a/eDKmVB9bDzJavx0ZWl1Na7hSI)
+
+## Start game: "Is the number prime?"
+
+We show the player the number. The player must determine whether this number is prime.
+
+```sh
+make brain-prime | node bin/brain-prime.js
+```
+
+[![asciicast](https://asciinema.org/a/abvInfoaeNzPyFUpsmouellEH.svg)](https://asciinema.org/a/abvInfoaeNzPyFUpsmouellEH)
