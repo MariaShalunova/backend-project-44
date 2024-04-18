@@ -51,7 +51,7 @@ const runRounds = (description, getRound, numberOfRounds = 3) => {
 
 // Question
 const getQuestion = (question, correctAnswer) => {
-  console.log(`Question:  ${question}`);
+  console.log(`Question: ${question}`);
 
   const playerAnswer = readlineSync.question('Your answer: ');
   const result = correctAnswer === playerAnswer;
