@@ -20,7 +20,6 @@ make brain-even | node bin/brain-even.js
 
 [![asciicast](https://asciinema.org/a/WJeq9WSm27HpWziYPhZdxHWOl.svg)](https://asciinema.org/a/WJeq9WSm27HpWziYPhZdxHWOl)
 
-
 ## Start game: "Calculator"
 
 The essence of the game is as follows: the user is shown a random mathematical expression, for example 35 + 16, which must be calculated and the correct answer written down.
@@ -31,7 +30,6 @@ make brain-calc | node bin/brain-calc.js
 
 [![asciicast](https://asciinema.org/a/jh3medwmk0LtlBuHwIhxH7HgC.svg)](https://asciinema.org/a/jh3medwmk0LtlBuHwIhxH7HgC)
 
-
 ## Start game: "GCD"
 
 The essence of the game is as follows: the user is shown two random numbers, for example, 25 50. The user must calculate and enter the greatest common divisor of these numbers.
@@ -41,3 +39,13 @@ make brain-gcd | node bin/brain-gcd.js
 ```
 
 [![asciicast](https://asciinema.org/a/FY9X0cQhPetmth5JH14uRs2Mr.svg)](https://asciinema.org/a/FY9X0cQhPetmth5JH14uRs2Mr)
+
+## Start game: "Arithmetic progression game"
+
+We show the player a series of numbers forming an arithmetic progression, replacing any of the numbers with two dots. The player must determine this number.
+
+```sh
+make brain-progression | node bin/brain-progression.js
+```
+
+[![asciicast](https://asciinema.org/a/eDKmVB9bDzJavx0ZWl1Na7hSI.svg)](https://asciinema.org/a/eDKmVB9bDzJavx0ZWl1Na7hSI)

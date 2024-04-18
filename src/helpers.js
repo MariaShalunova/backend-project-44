@@ -32,6 +32,31 @@ const getGCD = (a, b) => {
   return getGCD(b, a % b);
 };
 
+const getProgression = (
+  progressionStep,
+  progressionLength,
+  hiddenElementPosition,
+) => {
+  const arr = [];
+  let step = 0;
+  const sub = '..';
+
+  for (let i = 0; i < progressionLength; i += 1) {
+    step += progressionStep;
+    arr.push(step);
+  }
+
+  const correctAnswer = String(arr.splice(hiddenElementPosition - 1, 1, sub));
+  const question = arr.slice().join(' ');
+
+  return [question, correctAnswer];
+};
+
 export {
-  getRandomInt, getRandomOperation, isEvenNumber, calc, getGCD,
+  getRandomInt,
+  getRandomOperation,
+  isEvenNumber,
+  calc,
+  getGCD,
+  getProgression,
 };
