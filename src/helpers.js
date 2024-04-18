@@ -24,6 +24,14 @@ const calc = (a, b, operation) => {
   }
 };
 
+const getGCD = (a, b) => {
+  if (b === 0) {
+    return Math.abs(a);
+  }
+
+  return getGCD(b, a % b);
+};
+
 export {
-  getRandomInt, getRandomOperation, isEvenNumber, calc,
+  getRandomInt, getRandomOperation, isEvenNumber, calc, getGCD,
 };

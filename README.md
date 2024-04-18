@@ -30,3 +30,14 @@ make brain-calc | node bin/brain-calc.js
 ```
 
 [![asciicast](https://asciinema.org/a/jh3medwmk0LtlBuHwIhxH7HgC.svg)](https://asciinema.org/a/jh3medwmk0LtlBuHwIhxH7HgC)
+
+
+## Start game: "GCD"
+
+The essence of the game is as follows: the user is shown two random numbers, for example, 25 50. The user must calculate and enter the greatest common divisor of these numbers.
+
+```sh
+make brain-gcd | node bin/brain-gcd.js
+```
+
+[![asciicast](https://asciinema.org/a/FY9X0cQhPetmth5JH14uRs2Mr.svg)](https://asciinema.org/a/FY9X0cQhPetmth5JH14uRs2Mr)
