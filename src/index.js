@@ -54,9 +54,7 @@ const getQuestion = (question, correctAnswer) => {
   console.log(`Question:  ${question}`);
 
   const playerAnswer = readlineSync.question('Your answer: ');
-
   const result = correctAnswer === playerAnswer;
-
   return [result, playerAnswer];
 };
 
