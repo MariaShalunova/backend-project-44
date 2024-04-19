@@ -34,11 +34,14 @@ const getGCD = (a, b) => {
 
 const generateProgression = (progressionLength, progressionStep) => {
   let step = 0;
+  const arr = [];
 
   for (let i = 0; i < progressionLength; i += 1) {
     step += progressionStep;
     arr.push(step);
   }
+
+  return arr;
 };
 
 const getProgression = (

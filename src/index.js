@@ -1,4 +1,3 @@
-/* eslint no-use-before-define: ["error", { "variables": false }] */
 import readlineSync from 'readline-sync';
 
 // Player Greeting
@@ -11,19 +10,22 @@ const getPlayerName = () => {
   return name;
 };
 
-// Start Game
-const runGame = (description, getRound) => {
-  // Player Greeting
-  welcome();
+// Question
+const getQuestion = (question, correctAnswer) => {
+  console.log(`Question: ${question}`);
 
-  // Player name request
-  const player = getPlayerName();
+  const playerAnswer = readlineSync.question('Your answer: ');
+  const result = correctAnswer === playerAnswer;
+  return [result, playerAnswer];
+};
 
-  // Start rounds game
-  const resultGame = runRounds(description, getRound);
-
-  // Result game
-  gameOver(player, resultGame);
+// Result game
+const gameOver = (player, resultGame) => {
+  if (resultGame) {
+    console.log(`Congratulations, ${player}!`);
+  } else {
+    console.log(`Let's try again, ${player}!`);
+  }
 };
 
 // Start rounds game
@@ -50,22 +52,19 @@ const runRounds = (description, getRound, numberOfRounds = 3) => {
   return true;
 };
 
-// Question
-const getQuestion = (question, correctAnswer) => {
-  console.log(`Question: ${question}`);
+// Start Game
+const runGame = (description, getRound) => {
+  // Player Greeting
+  welcome();
 
-  const playerAnswer = readlineSync.question('Your answer: ');
-  const result = correctAnswer === playerAnswer;
-  return [result, playerAnswer];
-};
+  // Player name request
+  const player = getPlayerName();
 
-// Result game
-const gameOver = (player, resultGame) => {
-  if (resultGame) {
-    console.log(`Congratulations, ${player}!`);
-  } else {
-    console.log(`Let's try again, ${player}!`);
-  }
+  // Start rounds game
+  const resultGame = runRounds(description, getRound);
+
+  // Result game
+  gameOver(player, resultGame);
 };
 
 export default runGame;
