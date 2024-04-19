@@ -1,3 +1,4 @@
+/* eslint no-use-before-define: ["error", { "variables": false }] */
 import readlineSync from 'readline-sync';
 
 // Player Greeting

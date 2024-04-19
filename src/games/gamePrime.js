@@ -1,7 +1,7 @@
 import { getRandomInt, isPrime } from '../helpers.js';
 import runGame from '../index.js';
 
-const description = `Answer "yes" if given number is prime. Otherwise answer "no".`;
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const minNumber = 1;
 const maxNumber = 99;
 
