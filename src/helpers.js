@@ -32,19 +32,22 @@ const getGCD = (a, b) => {
   return getGCD(b, a % b);
 };
 
-const getProgression = (
-  progressionStep,
-  progressionLength,
-  hiddenElementPosition,
-) => {
-  const arr = [];
+const generateProgression = (progressionLength, progressionStep) => {
   let step = 0;
-  const sub = '..';
 
   for (let i = 0; i < progressionLength; i += 1) {
     step += progressionStep;
     arr.push(step);
   }
+};
+
+const getProgression = (
+  progressionStep,
+  progressionLength,
+  hiddenElementPosition,
+) => {
+  const arr = generateProgression(progressionLength, progressionStep);
+  const sub = '..';
 
   const correctAnswer = String(arr.splice(hiddenElementPosition - 1, 1, sub));
   const question = arr.slice().join(' ');
