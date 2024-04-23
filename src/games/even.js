@@ -9,9 +9,9 @@ const isEvenNumber = (randomNumber) => randomNumber % 2 === 0;
 
 const getRound = () => {
   const question = getRandomNumber(minNumber, maxNumber);
-  const correctAnswer = isEvenNumber(question) ? 'yes' : 'no';
+  const answer = isEvenNumber(question) ? 'yes' : 'no';
 
-  return [question, correctAnswer];
+  return [question, answer];
 };
 
 const runGameEven = () => {

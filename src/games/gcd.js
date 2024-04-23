@@ -16,9 +16,9 @@ const getRound = () => {
   const secondNumber = getRandomNumber(1, 99);
 
   const question = `${firstNumber} ${secondNumber}`;
-  const correctAnswer = getGCD(firstNumber, secondNumber).toString();
+  const answer = getGCD(firstNumber, secondNumber).toString();
 
-  return [question, correctAnswer];
+  return [question, answer];
 };
 
 const runGameGCD = () => {

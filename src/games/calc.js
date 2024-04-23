@@ -29,9 +29,9 @@ const getRound = () => {
   const number2 = getRandomNumber(1, 10);
 
   const question = `${number1} ${operation} ${number2}`;
-  const correctAnswer = calc(number1, number2, operation).toString();
+  const answer = calc(number1, number2, operation).toString();
 
-  return [question, correctAnswer];
+  return [question, answer];
 };
 
 const runGameCalc = () => {

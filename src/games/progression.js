@@ -24,10 +24,10 @@ const getRound = () => {
   const hiddenElementPosition = getRandomNumber(1, progressionLength);
   const sub = '..';
 
-  const correctAnswer = String(arr.splice(hiddenElementPosition - 1, 1, sub));
+  const answer = String(arr.splice(hiddenElementPosition - 1, 1, sub));
   const question = arr.slice().join(' ');
 
-  return [question, correctAnswer];
+  return [question, answer];
 };
 
 const runGameProgression = () => {
