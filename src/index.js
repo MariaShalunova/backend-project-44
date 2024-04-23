@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import { runWelcome } from './welcome.js';
 
-const runGame = (description, getRound, roundsCount = 3) => {
+export const runGame = (description, getRound, roundsCount = 3) => {
   console.log(`${description}`);
   const player = runWelcome();
 
@@ -24,5 +24,3 @@ const runGame = (description, getRound, roundsCount = 3) => {
 
   return true;
 };
-
-export default runGame;
