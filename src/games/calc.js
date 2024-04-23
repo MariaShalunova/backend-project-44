@@ -18,7 +18,7 @@ const calc = (a, b, operation) => {
 
 const getRound = () => {
   const operations = ['+', '-', '*'];
-  const operation = operations[getRandomNumber(operations.length - 1)];
+  const operation = operations[getRandomNumber(1, operations.length - 1)];
   const number1 = getRandomNumber(1, 100);
   const number2 = getRandomNumber(1, 10);
 
