@@ -1,7 +1,8 @@
+/* eslint-disable import/prefer-default-export */
 import readlineSync from 'readline-sync';
 import { runWelcome } from './welcome.js';
 
-export default runGame = (description, getRound, roundsCount = 3) => {
+export const runGame = (description, getRound, roundsCount = 3) => {
   console.log(`${description}`);
   const player = runWelcome();
 
