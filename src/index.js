@@ -24,7 +24,7 @@ const gameOver = (player, resultGame) => {
   }
 };
 
-const runRounds = (description, getRound, numberOfRounds = 3) => {
+const runRounds = (description, getRound, roundsCount = 3) => {
   console.log(`${description}`);
 
   let i = 0;
@@ -42,7 +42,7 @@ const runRounds = (description, getRound, numberOfRounds = 3) => {
       );
       return false;
     }
-  } while (i < numberOfRounds);
+  } while (i < roundsCount);
 
   return true;
 };
