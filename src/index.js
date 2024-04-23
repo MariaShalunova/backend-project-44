@@ -1,12 +1,5 @@
 import readlineSync from 'readline-sync';
-
-const welcome = () => console.log('Welcome to the Brain Games!');
-
-const getPlayerName = () => {
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
-  return name;
-};
+import { getWelcome } from './welcome.js';
 
 const getQuestion = (question, correctAnswer) => {
   console.log(`Question: ${question}`);
@@ -47,11 +40,8 @@ const runRounds = (description, getRound, roundsCount = 3) => {
   return true;
 };
 
-
 const runGame = (description, getRound) => {
-  welcome();
-
-  const player = getPlayerName();
+  const player = getWelcome();
 
   const resultGame = runRounds(description, getRound);
 
