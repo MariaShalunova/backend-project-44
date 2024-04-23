@@ -1,51 +1,29 @@
 import readlineSync from 'readline-sync';
-import { getWelcome } from './welcome.js';
+import { runWelcome } from './welcome.js';
 
-const getQuestion = (question, correctAnswer) => {
-  console.log(`Question: ${question}`);
-
-  const playerAnswer = readlineSync.question('Your answer: ');
-  const result = correctAnswer === playerAnswer;
-  return [result, playerAnswer];
-};
-
-const gameOver = (player, resultGame) => {
-  if (resultGame) {
-    console.log(`Congratulations, ${player}!`);
-  } else {
-    console.log(`Let's try again, ${player}!`);
-  }
-};
-
-const runRounds = (description, getRound, roundsCount = 3) => {
+const runGame = (description, getRound, roundsCount = 3) => {
   console.log(`${description}`);
+  const player = runWelcome();
 
-  let i = 0;
-  do {
+  for (let i = 1; i <= roundsCount; i += 1) {
+
     const [question, correctAnswer] = getRound();
-    const result = getQuestion(question, correctAnswer);
-    const [resultGame, playerAnswer] = result;
+    console.log(`Question: ${question}`);
 
-    if (resultGame) {
-      i += 1;
-      console.log('Correct!');
-    } else {
+    const playerAnswer = readlineSync.question('Your answer: ');
+
+    if (correctAnswer !== playerAnswer) {
       console.log(
         `'${playerAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
       );
+      console.log(`Let's try again, ${player}!`);
       return false;
     }
-  } while (i < roundsCount);
+    console.log('Correct!');
+  }
+  console.log(`Congratulations, ${player}!`);
 
   return true;
-};
-
-const runGame = (description, getRound) => {
-  const player = getWelcome();
-
-  const resultGame = runRounds(description, getRound);
-
-  gameOver(player, resultGame);
 };
 
 export default runGame;
