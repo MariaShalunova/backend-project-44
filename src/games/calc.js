@@ -25,11 +25,11 @@ const calc = (a, b, operation) => {
 
 const getRound = () => {
   const operation = getRandomOperation();
-  const firstNumber = getRandomNumber(1, 100);
-  const secondNumber = getRandomNumber(1, 10);
+  const number1 = getRandomNumber(1, 100);
+  const number2 = getRandomNumber(1, 10);
 
-  const question = `${firstNumber} ${operation} ${secondNumber}`;
-  const correctAnswer = calc(firstNumber, secondNumber, operation).toString();
+  const question = `${number1} ${operation} ${number2}`;
+  const correctAnswer = calc(number1, number2, operation).toString();
 
   return [question, correctAnswer];
 };
