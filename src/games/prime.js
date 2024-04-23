@@ -1,29 +1,30 @@
-import { getRandomNumber } from '../helpers.js';
-import { runGame } from '../index.js';
+import { getRandomNumber } from '../helpers.js'
+import { runGame } from '../index.js'
 
-const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const minNumber = 1;
-const maxNumber = 99;
+const description =
+  'Answer "yes" if given number is prime. Otherwise answer "no".'
+const minNumber = 1
+const maxNumber = 99
 
 const isPrime = (number) => {
   for (let i = 2; i < number; i += 1) {
     if (number % i === 0) {
-      return false;
+      return false
     }
   }
 
-  return number !== 1;
-};
+  return number !== 1
+}
 
 const getRound = () => {
-  const question = getRandomNumber(minNumber, maxNumber);
-  const answer = isPrime(question) ? 'yes' : 'no';
+  const question = getRandomNumber(minNumber, maxNumber)
+  const answer = isPrime(question) ? 'yes' : 'no'
 
-  return [question, answer];
-};
+  return [question, answer]
+}
 
 const runGamePrime = () => {
-  runGame(description, getRound);
-};
+  runGame(description, getRound)
+}
 
-export default runGamePrime;
+export default runGamePrime
