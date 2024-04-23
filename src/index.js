@@ -6,7 +6,6 @@ const runGame = (description, getRound, roundsCount = 3) => {
   const player = runWelcome();
 
   for (let i = 1; i <= roundsCount; i += 1) {
-
     const [question, correctAnswer] = getRound();
     console.log(`Question: ${question}`);
 
