@@ -11,8 +11,7 @@ const calc = (a, b, operation) => {
       return a - b;
     case '*':
       return a * b;
-    default:
-      return 'error calc  Научиться обрабатывать ошибки';
+    default: throw new RuntimeException("operation is not use");
   }
 };
 
