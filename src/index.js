@@ -1,16 +1,13 @@
 import readlineSync from 'readline-sync';
 
-// Player Greeting
 const welcome = () => console.log('Welcome to the Brain Games!');
 
-// Player name request
 const getPlayerName = () => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   return name;
 };
 
-// Question
 const getQuestion = (question, correctAnswer) => {
   console.log(`Question: ${question}`);
 
@@ -19,7 +16,6 @@ const getQuestion = (question, correctAnswer) => {
   return [result, playerAnswer];
 };
 
-// Result game
 const gameOver = (player, resultGame) => {
   if (resultGame) {
     console.log(`Congratulations, ${player}!`);
@@ -28,7 +24,6 @@ const gameOver = (player, resultGame) => {
   }
 };
 
-// Start rounds game
 const runRounds = (description, getRound, numberOfRounds = 3) => {
   console.log(`${description}`);
 
@@ -52,18 +47,14 @@ const runRounds = (description, getRound, numberOfRounds = 3) => {
   return true;
 };
 
-// Start Game
+
 const runGame = (description, getRound) => {
-  // Player Greeting
   welcome();
 
-  // Player name request
   const player = getPlayerName();
 
-  // Start rounds game
   const resultGame = runRounds(description, getRound);
 
-  // Result game
   gameOver(player, resultGame);
 };
 
