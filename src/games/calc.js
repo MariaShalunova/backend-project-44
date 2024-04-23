@@ -3,13 +3,6 @@ import { runGame } from '../index.js';
 
 const description = 'What is the result of the expression?';
 
-const getRandomOperation = () => {
-  const arr = ['+', '-', '*'];
-  const result = arr[Math.floor(Math.random() * arr.length)];
-
-  return result;
-};
-
 const calc = (a, b, operation) => {
   switch (operation) {
     case '+':
@@ -19,12 +12,13 @@ const calc = (a, b, operation) => {
     case '*':
       return a * b;
     default:
-      return 'error calc';
+      return 'error calc  Научиться обрабатывать ошибки';
   }
 };
 
 const getRound = () => {
-  const operation = getRandomOperation();
+  const operations = ['+', '-', '*'];
+  const operation = operations[getRandomNumber(operations.length - 1)];
   const number1 = getRandomNumber(1, 100);
   const number2 = getRandomNumber(1, 10);
 

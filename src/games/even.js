@@ -5,11 +5,11 @@ const description = 'Answer "yes" if the number is even, otherwise answer "no".'
 const minNumber = 1;
 const maxNumber = 999;
 
-const isEvenNumber = (randomNumber) => randomNumber % 2 === 0;
+const isEven = (randomNumber) => randomNumber % 2 === 0;
 
 const getRound = () => {
   const question = getRandomNumber(minNumber, maxNumber);
-  const answer = isEvenNumber(question) ? 'yes' : 'no';
+  const answer = isEven(question) ? 'yes' : 'no';
 
   return [question, answer];
 };

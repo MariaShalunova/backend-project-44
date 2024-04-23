@@ -3,12 +3,17 @@ import { runGame } from '../index.js';
 
 const description = 'What number is missing in the progression?';
 
-const generateProgression = (startNumber, progressionStep, progressionLength) => {
+const generateProgression = (
+  startNumber,
+  progressionStep,
+  progressionLength,
+) => {
   const arr = [];
+  let step = startNumber;
 
   for (let i = 0; i < progressionLength; i += 1) {
-    startNumber += progressionStep;
-    arr.push(startNumber);
+    step += progressionStep;
+    arr.push(step);
   }
 
   return arr;
@@ -19,7 +24,11 @@ const getRound = () => {
   const progressionStep = getRandomNumber(1, 10);
   const progressionLength = getRandomNumber(5, 10);
 
-  const arr = generateProgression(startNumber, progressionStep, progressionLength);
+  const arr = generateProgression(
+    startNumber,
+    progressionStep,
+    progressionLength,
+  );
 
   const hiddenElementPosition = getRandomNumber(1, progressionLength);
   const sub = '..';
