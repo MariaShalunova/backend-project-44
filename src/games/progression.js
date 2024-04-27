@@ -1,46 +1,46 @@
-import { getRandomNumber } from '../helpers.js'
-import { runGame } from '../index.js'
+import { getRandomNumber } from '../helpers.js';
+import { runGame } from '../index.js';
 
-const description = 'What number is missing in the progression?'
+const description = 'What number is missing in the progression?';
 
 const generateProgression = (
   startNumber,
   progressionStep,
-  progressionLength
+  progressionLength,
 ) => {
-  const arr = []
-  let step = startNumber
+  const arr = [];
+  let step = startNumber;
 
   for (let i = 0; i < progressionLength; i += 1) {
-    step += progressionStep
-    arr.push(step)
+    step += progressionStep;
+    arr.push(step);
   }
 
-  return arr
-}
+  return arr;
+};
 
 const getRound = () => {
-  const startNumber = getRandomNumber(1, 999)
-  const progressionStep = getRandomNumber(1, 10)
-  const progressionLength = getRandomNumber(5, 10)
+  const startNumber = getRandomNumber(1, 999);
+  const progressionStep = getRandomNumber(1, 10);
+  const progressionLength = getRandomNumber(5, 10);
 
   const arr = generateProgression(
     startNumber,
     progressionStep,
-    progressionLength
-  )
+    progressionLength,
+  );
 
-  const hiddenElementPosition = getRandomNumber(1, progressionLength)
-  const sub = '..'
+  const hiddenElementPosition = getRandomNumber(1, progressionLength);
+  const sub = '..';
 
-  const answer = String(arr.splice(hiddenElementPosition - 1, 1, sub))
-  const question = arr.slice().join(' ')
+  const answer = String(arr.splice(hiddenElementPosition - 1, 1, sub));
+  const question = arr.slice().join(' ');
 
-  return [question, answer]
-}
+  return [question, answer];
+};
 
 const runGameProgression = () => {
-  runGame(description, getRound)
-}
+  runGame(description, getRound);
+};
 
-export default runGameProgression
+export default runGameProgression;
