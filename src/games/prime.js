@@ -6,13 +6,26 @@ const minNumber = 1;
 const maxNumber = 99;
 
 const isPrime = (number) => {
-  for (let i = 2; i < number; i += 1) {
+  if (number <= 1) {
+    return false;
+  }
+
+  if (number === 2) {
+    return true;
+  }
+
+  if (number % 2 === 0) {
+    return false;
+  }
+
+  const limit = Math.sqrt(number);
+  for (let i = 3; i <= limit; i += 2) {
     if (number % i === 0) {
       return false;
     }
   }
 
-  return number !== 1;
+  return true;
 };
 
 const getRound = () => {

@@ -17,11 +17,9 @@ export const runGame = (description, getRound, roundsCount = 3) => {
         `'${playerAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
       );
       console.log(`Let's try again, ${player}!`);
-      return false;
+      return;
     }
     console.log('Correct!');
   }
   console.log(`Congratulations, ${player}!`);
-
-  return true;
 };
