@@ -9,11 +9,10 @@ const generateProgression = (
   progressionLength,
 ) => {
   const progression = [];
-  let step = startNumber;
 
   for (let i = 0; i < progressionLength; i += 1) {
-    step += progressionStep;
-    progression.push(step);
+    startNumber += progressionStep;
+    progression.push(startNumber);
   }
 
   return progression;
