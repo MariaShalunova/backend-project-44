@@ -2,8 +2,6 @@ import { getRandomNumber } from '../helpers.js';
 import { runGame } from '../index.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const minNumber = 1;
-const maxNumber = 99;
 
 const isPrime = (number) => {
   if (number <= 1) {
@@ -29,7 +27,7 @@ const isPrime = (number) => {
 };
 
 const getRound = () => {
-  const question = getRandomNumber(minNumber, maxNumber);
+  const question = getRandomNumber(1, 99);
   const answer = isPrime(question) ? 'yes' : 'no';
 
   return [question, answer];
