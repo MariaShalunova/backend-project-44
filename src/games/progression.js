@@ -3,12 +3,15 @@ import { runGame } from '../index.js';
 
 const description = 'What number is missing in the progression?';
 
-const generateProgression = ( startNumber, progressionStep, progressionLength, ) => {
+const generateProgression = (
+  startNumber,
+  progressionStep,
+  progressionLength,
+) => {
   const progression = [];
 
   for (let i = 0; i < progressionLength; i += 1) {
-    startNumber += progressionStep;
-    progression.push(startNumber);
+    progression.push(startNumber + i * progressionStep);
   }
 
   return progression;
