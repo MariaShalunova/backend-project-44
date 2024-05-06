@@ -8,15 +8,15 @@ const generateProgression = (
   progressionStep,
   progressionLength,
 ) => {
-  const arr = [];
+  const progression = [];
   let step = startNumber;
 
   for (let i = 0; i < progressionLength; i += 1) {
     step += progressionStep;
-    arr.push(step);
+    progression.push(step);
   }
 
-  return arr;
+  return progression;
 };
 
 const getRound = () => {
