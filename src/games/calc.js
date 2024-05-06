@@ -3,14 +3,14 @@ import { runGame } from '../index.js';
 
 const description = 'What is the result of the expression?';
 
-const calc = (a, b, operation) => {
+const calc = (number1, number2, operation) => {
   switch (operation) {
     case '+':
-      return a + b;
+      return number1 + number2;
     case '-':
-      return a - b;
+      return number1 - number2;
     case '*':
-      return a * b;
+      return number1 * number2;
     default:
       return `operation: ${operation} is not use`;
   }
